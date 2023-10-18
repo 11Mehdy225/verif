@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!--lien boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <!--lien fontawesome-->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>certification Fond web</title>
+</head>
+<body>
+    <!--nous creons un bouton qui nous permet de retoiurner vers la page precedente -->
+<div class="retour">
+    <button  class="bouton-retour" onclick="history.back()">Retour</button>
+</div>
+<!--nous avons ici un texte qui affiche que le panier est vide lorsque celui ci ne contient pas d'article -->
+<section id="PanierVide" class="panier-vide">
+    <div id="BlocTitrePanier" class="empty">
+        <h2 id="BlocTitrePanier" class="content-empty">
+           votre panier est vide <br>
+           veuillez ajouter des articles de notre  <a href="boutique.html" class="recalage"> &nbsp;boutique </a> 
+        </h2>
+    </div>
+</section>
+<!--notre panier lorsqu'un artcile est ajouté -->
+<section class="paniermaj" id="PanierMaj">
+    <!--notre cardi avec le bilan et le paiement-->
+    <div class="cardi" id="Cardi">
+        <!--notre bilan de commande limage avec toute les references de l'article prix etc et bouton pour surprimer-->
+            <div class="recap" id="Recap">
+                 <div class="articleselectionné" id="ArticleSelectionné">
+                    <img src="produits/ivory.webp" alt="" width="200px" height="260px">
+                 </div>
+           
+                 <div class="bilan" id="Bilan">
+                    <p class="nompanier" id="NomPanier">
+                        <u>Mon Panier</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <i class='bx bx-trash-alt red'class="remove" id="Remove" ></i>
+                    </p>
+                     <p class="nomarticle" id="NomArticle"><u>Nom</u>:ivory dom</p>
+                     <p class="prix1" id="Prix1"><u>PU</u>:15.000 </p>
+                     <p class="quantité" id="Quantité"></p>
+                     <p class="soustotal" id="SousTotal"><u>sous total :</u> <span class="sous-total1">0</span></p>
+                 </div>
+           </div>
+            <!--la rubrique pour les paiements  -->
+         <div class="finaliser" id="Finaliser">
+                <div class="finalisation" id="Finalisation">
+                    <p class="total">TOTAL</p>
+                    <p class="soustotal2" id="SousTotal2">sous total <span class="sous-total2">0</span></p>
+                    <p class="Livraison">
+                        <label for="commune">Choisissez un lieu de livraison :</label>
+                        <select id="commune" name="ville">
+                            <option value="koumassi">koumassi</option>
+                            <option value="marcory">marcory</option>
+                            <option value="yopougon">yopougon</option>
+                        </select>
+                    </p>
+                    <p class="paiement" id="Paiement">
+                        <button class="plus">valider</button>
+                    </p>
+
+                </div>
+                <div class="mdepaiement" id="MdPaiement">
+                    <p class="nousacceptons" id="NousAcceptons">
+                        <img src="visa.png" alt="visa">
+                        <img src="mastercard.png" alt="mastercard">
+                        <img src="applepay.png" alt="applePay">
+                        <img src="gglepay.jpg" alt="googlepay">
+                        <img src="paypal.png" alt="paypal">
+                    </p>
+                </div>
+                <div class="codepromo1" id="CodePromo">
+                    <label class="codepromo"  for="code-promo">Code promo :</label>
+                    <br>
+                    <input type="text" id="code-promo" name="code-promo" placeholder="Entrez votre code promo">
+                </div>
+            </div>
+        </div>
+
+</section>
+<script src="panier.js">

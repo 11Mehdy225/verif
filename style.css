@@ -1,0 +1,474 @@
+    :root {
+      --ecriture:black;
+      --background:white;
+      --globale:white;
+      --primaire:#007bc4;
+      --noir:black;
+      --secondaire:gray;
+
+    }
+
+/*css querry media*/
+ /* Styles pour les écrans de bureau */
+ @media (min-width: 992px) and (max-width: 1200px) {
+  body {
+    width: 50%;
+    float: left;
+  }
+}
+/*les appareils plus larges*/
+@media (min-width: 1200px) {
+  body {
+    width: 100%;
+  }
+}
+
+/* Styles pour les écrans mobiles */
+@media  ( min-width: 576px) and (max-width: 767px) {
+  body {
+    width: 100%;
+    float: none;
+  }
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+ 
+
+    h1 {
+     margin: 250px;
+      font-size: 80px;
+      color: var(--ecriture);
+    }
+
+    .theme {
+      cursor: pointer;
+      width: 120px;
+      height: 20px;
+      border: 2px solid;
+      color: var(--ecriture);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      border-radius: 5px;
+      margin-top: 7px;
+      margin-right: 1300px;
+    }
+
+    /*nous declaron sune propriete generale pour tout les ul et li pour ne pas se repeter*/
+
+ul,li {
+  list-style: none;
+}
+
+ /*le slide d'image*/
+
+    main {
+      width: 1400px;
+      margin-top:70px ;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .caf2  {
+      margin-left: 10px;
+    }
+
+    .caf1  {
+       margin-right: 10px;
+    }
+
+    .diapo {
+       position: relative;
+      overflow: hidden;
+    }
+
+    .elements{
+      display: flex;
+     }
+
+    .element{
+      flex: 1 0 100%;
+      position: relative;
+    }
+
+    .element > img {
+      width: 100%;
+      border-radius: 10px;
+    }
+/*Position des titres des images */
+    .caption {
+       position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgba(255, 255, 255, 0.3) ;
+      text-align: center;
+    }
+ /*les fleches de navigation du slide*/
+    #nav-gauche {
+       position: absolute;
+      top: 50%;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%);
+      font-size: 3rem;
+      cursor: pointer;
+    }
+    #nav-droite {
+      position: absolute;
+      top: 50%;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%);
+      right: 0;
+      font-size: 3rem;
+      cursor: pointer;
+    }
+
+
+    /*le menu*/
+   
+
+    /*premiere grille*/
+ header {
+  position: fixed;
+  background:rgba(0,0,0,0);
+  transition: box-shadow .25s ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 48%;
+}
+
+/*positionement du menu*/
+nav  {
+  position: relative;
+  float: right;
+  margin: auto;
+}  
+
+/* style des liens de la barre  */
+.nav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5px 9px;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Prompt', sans-serif;
+  color: gray;
+  border-bottom: 3px solid transparent;
+}
+
+.nav a:hover {
+  border-bottom: 3px rgb(47, 255, 217);
+color: rgb(47, 255, 217);
+text-decoration: none;
+}
+
+
+
+
+ /*footer*/
+    footer {
+         background-image: url("bg\ site.jpg");
+         width: 100%;
+         height: 300px;
+         margin-top: 20px;
+         background-repeat: no-repeat;
+         background-size: cover;
+    }
+
+ /*la disposition des elemenst de notre footer*/
+ /*icone de telechargement*/
+    .telecharger {
+      margin-left: 60px;
+    }
+ /*icone partenaire*/
+    .footer{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  .sponsor{
+    width: 1500px;
+    margin-left: 200px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sponsor a {
+    display: inline-block;
+  }
+  
+  .sponsor ul {
+      list-style: none;
+       display: flex;
+      flex-wrap: wrap;
+  }
+  .sponsor img {
+    width: 110px;
+    height: 44px;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+
+  .le_developpeur {
+                    margin-left: 350px;
+                    margin-top: 30px;
+  }
+
+  .le_developpeur img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        
+  }
+
+  /*les artciles en vente cette semaine*/
+  .offim {
+    position: relative;
+    width: 293px;
+    height: 270px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 10px;
+    z-index: 0;
+  }
+/*les div produits et leur prix*/
+  .produits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+   
+
+  }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+
+    }
+    .prix {
+      font-family: 'Prompt', sans-serif;
+      margin-left: 30px;
+    }
+
+
+/*les boutons des legendes*/
+    .ajouter {
+      margin-left: 70px;
+      margin-top: 25px;
+      background-color:#3d83df;
+      color: #fff;
+      font-family: 'Prompt', sans-serif;
+      border-radius: 10px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .ajouter:hover {
+      background-color: #011f46;
+    }
+
+
+
+    .office1 img{
+      transition: all 500ms ease-in-out;
+    }
+
+    .office1:hover img {
+      transform: scale(1.2);
+    }
+    figcaption i {
+      padding-left: 15px;
+      margin-top: 30px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+     /*-----------------------------------------------------page panier-----------------------------------------------*/
+    /*---------------------------------le bouton de retour de notre page boutique et panier-----------------------------------*/
+.bouton-retour{ 
+  text-decoration: underline; 
+  margin-top: 50px;
+  margin-left: 70px;
+  margin-top: 25px;
+  color:rgb(0, 255, 225);
+  font-family: 'Prompt', sans-serif;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+/*le texte qui affiche lorsque le panier est vide  avec un lien de retour vers la page boutique qui est repositionner*/
+#BlocTitrePanier {
+  display: flex;
+  justify-content: center;
+  font-family: 'Waiting for the Sunrise', cursive; 
+  font-size:30px; 
+  margin: 10px 50px; 
+  letter-spacing: 6px; 
+  font-weight: bold;
+  overflow: hidden; /* Pour cacher les lettres supplémentaires */
+  white-space: nowrap; /* Pour empêcher le texte de passer à la ligne */
+  margin: 0 auto; /* Pour centrer le titre */
+  letter-spacing: .15em; /* Pour espacer les lettres */
+  animation: typing 1s steps(40, end), blink-caret .75s step-end infinite; /* Animation de saisie et clignotement du curseur */
+}
+ /*l'animation de type saisie des lettres*/
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% ;
+}
+ /*le replacement du mot boutique qui sert de lien vers la page boutique*/
+.recalage {
+  margin-top: 50px;
+}
+
+/*notre premiere div qui comprend tout les elements*/
+
+.cardi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 3px solid #0D1F23;
+  box-shadow: 0 15px 20px #132E35;
+  border-radius: 5px;
+  margin-top: 10px;
+} 
+
+
+/*div avec notre article*/
+.recap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 10px ;
+}
+
+/*notre artiicle selectionné*/
+.articleselectionné {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+
+}
+/*l'image de notre article*/
+.articleselectionné img {
+  border-radius: 10%;
+}
+
+/*les references de notre article*/
+.bilan {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+/*div avec les paiements */
+.finaliser {
+  text-align: justify;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.finalisation {
+  text-align: justify;
+  margin-left: 20px;
+}
+
+/*le bouton pour valider*/
+.paiement {
+  text-align: center;
+}
+.plus {
+  background-color:rgb(192, 180, 180);
+  color: black;
+  font-family: 'Prompt', sans-serif;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+ }
+
+ .plus:hover {
+  background-color:green;
+ }
+
+ /*nos images partenaire paiement*/
+ .nousacceptons img {
+  margin-left: 10px;
+  width: 55px;
+  height: 35px;
+ } 
+
+ /*selection de comune pour livraison*/
+ select {
+  background-color: #f2f2f2;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+/*le input pour le code promo*/
+input {
+  background-color: #f2f2f2;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.codepromo1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  margin-right: 10px;
+}
+
+.codepromo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 10px;
+}
